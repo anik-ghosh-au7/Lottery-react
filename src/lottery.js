@@ -1,58 +1,59 @@
 import web3 from './web3';
 
-const address = '0x616D1525676c71da8d66969bF6F25a877Cc7b9B5';
+const address = '0xF7E99Ac905499c264b8A9D437AA264b23371f077';
 
 const abi = [
 	{
-		constant: true,
 		inputs: [],
-		name: 'manager',
-		outputs: [{ name: '', type: 'address' }],
-		payable: false,
-		stateMutability: 'view',
-		type: 'function',
-	},
-	{
-		constant: false,
-		inputs: [],
-		name: 'pickWinner',
-		outputs: [],
-		payable: false,
 		stateMutability: 'nonpayable',
-		type: 'function',
+		type: 'constructor',
+		signature: 'constructor',
 	},
 	{
-		constant: true,
-		inputs: [],
-		name: 'getPlayers',
-		outputs: [{ name: '', type: 'address[]' }],
-		payable: false,
-		stateMutability: 'view',
-		type: 'function',
-	},
-	{
-		constant: false,
 		inputs: [],
 		name: 'enter',
 		outputs: [],
-		payable: true,
 		stateMutability: 'payable',
 		type: 'function',
-	},
-	{
-		constant: true,
-		inputs: [{ name: '', type: 'uint256' }],
-		name: 'players',
-		outputs: [{ name: '', type: 'address' }],
-		payable: false,
-		stateMutability: 'view',
-		type: 'function',
+		payable: true,
+		signature: '0xe97dcb62',
 	},
 	{
 		inputs: [],
-		payable: false,
+		name: 'getPlayers',
+		outputs: [
+			{ internalType: 'address payable[]', name: '', type: 'address[]' },
+		],
+		stateMutability: 'view',
+		type: 'function',
+		constant: true,
+		signature: '0x8b5b9ccc',
+	},
+	{
+		inputs: [],
+		name: 'manager',
+		outputs: [{ internalType: 'address', name: '', type: 'address' }],
+		stateMutability: 'view',
+		type: 'function',
+		constant: true,
+		signature: '0x481c6a75',
+	},
+	{
+		inputs: [],
+		name: 'pickWinner',
+		outputs: [],
 		stateMutability: 'nonpayable',
-		type: 'constructor',
+		type: 'function',
+		signature: '0x5d495aea',
+	},
+	{
+		inputs: [{ internalType: 'uint256', name: '', type: 'uint256' }],
+		name: 'players',
+		outputs: [{ internalType: 'address payable', name: '', type: 'address' }],
+		stateMutability: 'view',
+		type: 'function',
+		constant: true,
+		signature: '0xf71d96cb',
 	},
 ];
 
